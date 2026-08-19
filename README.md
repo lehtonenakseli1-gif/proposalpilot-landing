@@ -2,13 +2,13 @@
 
 Static marketing site. No build step, no dependencies to install.
 Plain HTML + CSS + vanilla JS; the only external services are Google Fonts (Inter)
-and Formspree (waitlist form).
+and Formspree (contact form).
 
 ## Files
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The landing page: nav, hero, stats, how it works, features, pricing, waitlist, FAQ, CTA, footer |
+| `index.html` | The landing page: nav, hero, stats, how it works, features, pricing, contact form, FAQ, CTA, footer |
 | `styles.css` | All styling, mobile-first with breakpoints at 700px and 960px |
 | `privacy.html` | Privacy policy |
 | `terms.html` | Terms of service |
@@ -21,17 +21,25 @@ python3 -m http.server 4321 --directory .
 
 Then open http://localhost:4321.
 
-## Waitlist form
+## Contact form
+
+Every CTA on the page (nav, hero, pricing card, bottom CTA) points at `#contact`.
+There is one form and one conversion path.
 
 The form posts to Formspree endpoint `https://formspree.io/f/mgawpjbw` via `fetch`,
 so the page never reloads. Submissions arrive in the Formspree dashboard and by email.
-To change the endpoint, edit the `action` attribute on `#waitlistForm` in `index.html`.
+To change the endpoint, edit the `action` attribute on `#contactForm` in `index.html`.
 
-## Pricing buttons
+Fields sent: `name`, `email`, `business`, `details`, plus a hidden `plan` field that
+records which button the visitor clicked (set from each CTA's `data-plan` attribute),
+so leads are attributable. `_gotcha` is Formspree's honeypot — bots fill it, people
+don't, and Formspree drops those submissions.
 
-Both "Get started" buttons are `mailto:` links to lehtonen.akseli1@gmail.com with a
-prefilled subject. To switch to Stripe, replace the two `href` values in the pricing
-section with your Stripe Payment Link URLs.
+## Pricing
+
+$99/month, 3-month minimum, no setup fee. The price appears in three places in
+`index.html`: the hero button, the pricing card, and the FAQ. `terms.html` states the
+fee and the minimum term. Change all of them together.
 
 ## Deploy to GitHub Pages
 
