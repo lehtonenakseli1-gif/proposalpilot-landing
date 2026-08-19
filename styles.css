@@ -489,6 +489,11 @@ section {
   margin-top: 8px;
 }
 
+/* Steps without a "STEP 1" label carry the icon on its own. */
+.step > .icon {
+  margin-bottom: 16px;
+}
+
 /* ---------- Features ---------- */
 
 .features {
@@ -683,16 +688,6 @@ section {
   width: 1px;
   height: 1px;
   opacity: 0;
-}
-
-.contact-alt {
-  margin-top: 18px;
-  font-size: 14px;
-  text-align: center;
-}
-
-.contact-alt a {
-  color: var(--accent);
 }
 
 .form-msg {
