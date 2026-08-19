@@ -1,12 +1,14 @@
 /* ProposalPilot — landing page styles. Mobile first. */
 
 :root {
-  --bg: #0a0a0a;
-  --surface: #151515;
-  --accent: #f5c518;
-  --text: #ffffff;
-  --muted: #a0a0a0;
-  --line: #252525;
+  --bg: #17252a;
+  --surface: #1d3238;
+  --accent: #3aafa9;
+  --accent-deep: #2b7a78;
+  --accent-pale: #def2f1;
+  --text: #feffff;
+  --muted: #a7c4c2;
+  --line: #294349;
   --nav-h: 60px;
   --pad: 20px;
   --maxw: 1120px;
@@ -116,17 +118,17 @@ section {
 
 .btn-primary {
   background: var(--accent);
-  color: #0a0a0a;
+  color: #17252a;
   font-weight: 700;
 }
 
 .btn-primary:hover {
-  background: #ffd83d;
+  background: #4fc4be;
 }
 
 .btn-secondary {
   background: transparent;
-  border-color: #3a3a3a;
+  border-color: #2b7a78;
   color: var(--text);
 }
 
@@ -191,7 +193,7 @@ section {
   height: 26px;
   background: var(--accent);
   border-radius: 6px;
-  color: #0a0a0a;
+  color: #17252a;
   flex: none;
 }
 
@@ -242,7 +244,7 @@ section {
 .nav-menu .btn {
   margin-top: 20px;
   border-bottom: 0;
-  color: #0a0a0a;
+  color: #17252a;
   font-size: 16px;
 }
 
@@ -312,7 +314,7 @@ section {
 .mockup-bar span {
   width: 9px;
   height: 9px;
-  background: #333;
+  background: #2b7a78;
   border-radius: 50%;
 }
 
@@ -343,7 +345,7 @@ section {
 
 .field .value {
   padding: 10px 12px;
-  background: #0f0f0f;
+  background: #101b1f;
   border: 1px solid var(--line);
   border-radius: 6px;
   color: var(--text);
@@ -368,7 +370,7 @@ section {
 
 .doc {
   padding: 16px;
-  background: #0f0f0f;
+  background: #101b1f;
   border: 1px solid var(--line);
   border-radius: 6px;
 }
@@ -386,7 +388,7 @@ section {
 
 .doc-head .tag {
   padding: 3px 8px;
-  background: rgba(245, 197, 24, 0.12);
+  background: rgba(58, 175, 169, 0.14);
   border-radius: 4px;
   color: var(--accent);
   font-size: 11px;
@@ -402,14 +404,14 @@ section {
 .doc-lines i {
   display: block;
   height: 8px;
-  background: #1e1e1e;
+  background: #223a40;
   border-radius: 3px;
 }
 
 .doc-lines i.w80 { width: 80%; }
 .doc-lines i.w60 { width: 60%; }
 .doc-lines i.w45 { width: 45%; }
-.doc-lines i.accent { background: rgba(245, 197, 24, 0.35); width: 35%; }
+.doc-lines i.accent { background: rgba(58, 175, 169, 0.4); width: 35%; }
 
 /* ---------- Stats bar ---------- */
 
@@ -477,7 +479,7 @@ section {
   place-items: center;
   width: 38px;
   height: 38px;
-  background: rgba(245, 197, 24, 0.1);
+  background: rgba(58, 175, 169, 0.12);
   border-radius: 8px;
   color: var(--accent);
   flex: none;
@@ -551,7 +553,7 @@ section {
   padding: 4px 10px;
   background: var(--accent);
   border-radius: 100px;
-  color: #0a0a0a;
+  color: #17252a;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -654,7 +656,7 @@ section {
 .contact-form textarea {
   width: 100%;
   padding: 12px 14px;
-  background: #0f0f0f;
+  background: #101b1f;
   border: 1px solid var(--line);
   border-radius: 6px;
   color: var(--text);
@@ -665,7 +667,7 @@ section {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #6b6b6b;
+  color: #6e8b8a;
 }
 
 .contact-form input:focus,
@@ -761,12 +763,12 @@ section {
 
 .cta {
   background: var(--accent);
-  color: #0a0a0a;
+  color: #17252a;
   text-align: center;
 }
 
 .cta h2 {
-  color: #0a0a0a;
+  color: #17252a;
   max-width: 18ch;
   margin: 0 auto;
 }
@@ -774,17 +776,17 @@ section {
 .cta p {
   margin: 16px auto 28px;
   max-width: 42ch;
-  color: rgba(10, 10, 10, 0.75);
+  color: rgba(23, 37, 42, 0.78);
   font-weight: 500;
 }
 
 .cta .btn {
-  background: #0a0a0a;
+  background: #17252a;
   color: var(--accent);
 }
 
 .cta .btn:hover {
-  background: #1c1c1c;
+  background: #0f1a1e;
 }
 
 /* ---------- Footer ---------- */
@@ -847,7 +849,7 @@ section {
 .legal .updated {
   margin-top: 12px;
   font-size: 14px;
-  color: #6b6b6b;
+  color: #6e8b8a;
 }
 
 /* ---------- Tablet ---------- */
@@ -947,7 +949,7 @@ section {
   }
 
   .nav-links .btn {
-    color: #0a0a0a;
+    color: #17252a;
   }
 
   .hero {
