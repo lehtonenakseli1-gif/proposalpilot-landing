@@ -281,6 +281,11 @@ section {
   font-size: 17px;
 }
 
+/* The client's own words in the headline — set apart, not shouted. */
+.quoted {
+  color: var(--accent);
+}
+
 .hero-actions {
   display: flex;
   flex-direction: column;
@@ -516,6 +521,174 @@ section {
 
 .feature p {
   margin-top: 8px;
+  font-size: 15px;
+}
+
+/* ---------- Example proposal (paper preview) ---------- */
+
+#example {
+  border-top: 1px solid var(--line);
+}
+
+.paper-frame {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  padding: 12px;
+}
+
+/* The visitor can scroll the document itself, the way they'd scroll a PDF. */
+.paper {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 28px 22px 34px;
+  background: #ffffff;
+  border-radius: 6px;
+  color: #1a1a1a;
+  font-size: 13px;
+  line-height: 1.55;
+  overscroll-behavior: contain;
+}
+
+.paper strong {
+  color: #111;
+}
+
+.paper p {
+  margin-top: 8px;
+}
+
+.paper-head {
+  display: grid;
+  gap: 2px;
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid #4a5158;
+  color: #5c6570;
+  font-size: 11.5px;
+}
+
+.paper-head strong {
+  font-size: 14px;
+}
+
+.paper-title {
+  margin-top: 26px;
+  color: #111;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+}
+
+.paper-meta {
+  color: #5c6570;
+  font-size: 11.5px;
+}
+
+.paper h4 {
+  margin-top: 22px;
+  color: #5c6570;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.paper-table {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.paper-table th {
+  padding-bottom: 6px;
+  border-bottom: 1.2px solid #4a5158;
+  color: #5c6570;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.paper-table td {
+  padding: 8px 8px 8px 0;
+  border-bottom: 1px solid #e6e8ea;
+  vertical-align: top;
+}
+
+.paper-table td:first-child {
+  font-weight: 700;
+  color: #111;
+}
+
+.paper-table td:nth-child(2) {
+  color: #5c6570;
+}
+
+.paper-table .num {
+  padding-right: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.paper-table .total td {
+  background: #f5f7f8;
+  border-bottom: 0;
+  font-weight: 700;
+  color: #111;
+}
+
+.paper-foot {
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #e6e8ea;
+  color: #7a828b;
+  font-size: 10.5px;
+}
+
+.paper-note {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* ---------- What it saves ---------- */
+
+.value-box {
+  padding: 30px 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.value-lead {
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.value-figures {
+  display: grid;
+  gap: 24px;
+  margin-top: 28px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.value-figures b {
+  display: block;
+  color: var(--accent);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.value-figures span {
+  display: block;
+  margin: 6px auto 0;
+  max-width: 30ch;
   font-size: 15px;
 }
 
@@ -902,6 +1075,24 @@ section {
     grid-template-columns: 1fr 1fr;
   }
 
+  .value-figures {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .value-box {
+    padding: 40px 32px;
+  }
+
+  .value-lead {
+    font-size: 28px;
+  }
+
+  .paper {
+    padding: 40px 44px 46px;
+    font-size: 13.5px;
+  }
+
   .contact-form {
     padding: 32px;
   }
@@ -959,7 +1150,7 @@ section {
   }
 
   .hero h1 {
-    max-width: 16ch;
+    max-width: 21ch;
     margin: 0 auto;
   }
 
@@ -1007,5 +1198,19 @@ section {
 
   .faq {
     max-width: 760px;
+  }
+
+  .paper-frame {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .value-box {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  .value-lead {
+    font-size: 32px;
   }
 }
